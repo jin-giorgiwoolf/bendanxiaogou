@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>生日纪念 · 幕后纪录</title>
+<title>小狗生日要快乐</title>
 
 <style>
   /* ============================================================
@@ -304,11 +304,7 @@
 </head>
 <body>
 
-  <!-- 顶部小水印导航，可删除或修改文字 -->
-  <div class="top-nav">
-    <span><!-- ✏️【可修改】左上角小字 -->幕后纪录</span>
-    <span id="nav-year"></span>
-  </div>
+  <!-- 顶部小水印导航已移除，如需恢复可参考历史版本 -->
 
   <!-- ============================================================
        首页 Hero 区域
@@ -316,7 +312,7 @@
   ============================================================ -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-title">致 —— 你的名字</div>
+      <div class="hero-title">生日快乐咯</div>
       <div class="hero-subtitle">一段被悄悄记录下来的时间</div>
       <a href="#chapter1" class="start-btn">开始观看</a>
     </div>
@@ -329,8 +325,6 @@
           即可添加更多章节，记得修改 id（如 chapter2, chapter3...）
   ============================================================ -->
   <section class="chapter fade-section" id="chapter1">
-    <div class="chapter-index">Chapter 01</div>
-
     <!-- ✏️【可修改】章节标题 -->
     <h2 class="chapter-title">起点</h2>
 
@@ -363,8 +357,6 @@
        章节二（示例，可继续复制增加）
   ============================================================ -->
   <section class="chapter fade-section" id="chapter2">
-    <div class="chapter-index">Chapter 02</div>
-
     <h2 class="chapter-title">过程</h2>
 
     <p class="chapter-text">
@@ -395,8 +387,7 @@
        ✏️ 想要更多章节，从这里开始复制粘贴上面的 <section> 结构
        记得：
        1. id 改成 chapter3、chapter4...
-       2. Chapter 0X 数字改一下
-       3. 标题、正文、视频文件名、图片文件名都替换成新的
+       2. 标题、正文、视频文件名、图片文件名都替换成新的
   ============================================================ -->
 
 
@@ -413,25 +404,17 @@
     </div>
 
     <div class="audio-wrapper">
-      <div class="audio-label">一段想对你说的话</div>
-      <!-- ✏️【替换录音】把 voice.mp3 换成你自己的录音文件名 -->
+      <div class="audio-label">给你唱首生日歌</div>
+      <!-- ✏️【替换录音】把 voice.mp3 换成你唱生日歌的录音文件名 -->
       <audio controls>
         <source src="voice.mp3" type="audio/mpeg">
         您的浏览器不支持 audio 标签。
       </audio>
     </div>
-
-    <!-- ✏️【可修改】落款文字，比如日期或署名 -->
-    <div class="finale-signature">2026</div>
   </section>
 
 
   <script>
-    // ============================================================
-    // 顶部小字年份，自动获取当前年份，无需修改
-    // ============================================================
-    document.getElementById('nav-year').textContent = new Date().getFullYear();
-
     // ============================================================
     // 滚动淡入效果
     // 所有带有 class="fade-section" 的区块，
