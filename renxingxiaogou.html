@@ -88,7 +88,6 @@
     font-size: clamp(13px, 2vw, 16px);
     color: var(--text-dim);
     letter-spacing: 0.15em;
-    text-transform: uppercase;
     margin-bottom: 56px;
   }
 
@@ -167,6 +166,16 @@
     font-weight: 300;
     letter-spacing: 0.02em;
     margin-bottom: 28px;
+  }
+
+  /* 章节开头的大字短句，用来代替标题的位置 */
+  .chapter-lead{
+    font-size: clamp(22px, 3.6vw, 32px);
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    color: var(--text);
+    max-width: 560px;
+    margin-bottom: 40px;
   }
 
   /* ✏️ 【可修改】章节正文文字样式 */
@@ -313,7 +322,7 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-title">生日快乐咯</div>
-      <div class="hero-subtitle">一段被悄悄记录下来的时间</div>
+      <div class="hero-subtitle">来看看我给你准备了什么吧！hhhhh</div>
       <a href="#chapter1" class="start-btn">开始观看</a>
     </div>
     <div class="scroll-hint">向下滚动</div>
@@ -326,15 +335,16 @@
   ============================================================ -->
   <section class="chapter fade-section" id="chapter1">
     <!-- ✏️【可修改】章节标题 -->
-    <h2 class="chapter-title">起点</h2>
+    <!-- ✏️【可修改】章节标题（如需恢复，取消下方注释）
+    <h2 class="chapter-title">序</h2>
+    -->
 
-    <!-- ✏️【可修改】章节正文文字，换行会保留 -->
-    <p class="chapter-text">
-这里写这段故事的开始。
-可以是你们认识的契机，也可以是筹备这份礼物的初衷。
+    <!-- ✏️【可修改】章节开头的一句话，换行会保留 -->
+    <p class="chapter-lead">
+这封信，我想念给你听。
     </p>
 
-    <!-- ✏️【替换视频】把 video1.mp4 换成你自己的视频文件名 -->
+    <!-- ✏️【替换视频】把 video1.mp4 换成你自己的视频文件名（这里是读手写信的视频） -->
     <div class="video-wrapper">
       <video controls playsinline preload="metadata" poster="">
         <source src="video1.mp4" type="video/mp4">
@@ -342,13 +352,13 @@
       </video>
     </div>
 
-    <!-- ✏️【替换图片】把 photo1.jpg / photo2.jpg 换成你自己的图片文件名 -->
+    <!-- ✏️【替换图片】把 photo1.jpg / photo2.jpg 换成手写信的照片 -->
     <div class="photo-grid">
       <div class="photo-item">
-        <img src="photo1.jpg" alt="照片一">
+        <img src="photo1.jpg" alt="手写信">
       </div>
       <div class="photo-item">
-        <img src="photo2.jpg" alt="照片二">
+        <img src="photo2.jpg" alt="手写信">
       </div>
     </div>
   </section>
@@ -357,14 +367,16 @@
        章节二（示例，可继续复制增加）
   ============================================================ -->
   <section class="chapter fade-section" id="chapter2">
-    <h2 class="chapter-title">过程</h2>
+    <!-- ✏️【可修改】章节标题（如需恢复，取消下方注释）
+    <h2 class="chapter-title">幕后</h2>
+    -->
 
-    <p class="chapter-text">
-这里写筹备过程中的片段。
-可以描述你为这份礼物做了什么，谁参与了进来，发生了什么有趣或感动的事。
+    <!-- ✏️【可修改】章节开头的一句话，换行会保留 -->
+    <p class="chapter-lead">
+这段视频，是关于瞒着你的那些事。
     </p>
 
-    <!-- ✏️【替换视频】 -->
+    <!-- ✏️【替换视频】把 video2.mp4 换成你自己的视频文件名（这里是幕后花絮+旁白） -->
     <div class="video-wrapper">
       <video controls playsinline preload="metadata">
         <source src="video2.mp4" type="video/mp4">
