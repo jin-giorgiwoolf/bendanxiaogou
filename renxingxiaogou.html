@@ -72,7 +72,7 @@
   }
 
   /* ============================================================
-     ✏️ 【可修改】首页主标题文字
+     首页主标题文字
      直接修改下面这一行里的文字即可
   ============================================================ */
   .hero-title{
@@ -83,7 +83,7 @@
     margin-bottom: 18px;
   }
 
-  /* ✏️ 【可修改】首页副标题 / 小字说明 */
+  /* 首页副标题 / 小字说明 */
   .hero-subtitle{
     font-size: clamp(13px, 2vw, 16px);
     color: var(--text-dim);
@@ -160,7 +160,7 @@
     margin-bottom: 16px;
   }
 
-  /* ✏️ 【可修改】章节标题样式对应的文字在 HTML 主体里修改 */
+  /* 章节标题样式对应的文字在 HTML 主体里修改 */
   .chapter-title{
     font-size: clamp(24px, 4vw, 38px);
     font-weight: 300;
@@ -178,7 +178,7 @@
     margin-bottom: 40px;
   }
 
-  /* ✏️ 【可修改】章节正文文字样式 */
+  /* 章节正文文字样式 */
   .chapter-text{
     font-size: 16px;
     color: #d0d0d0;
@@ -241,7 +241,7 @@
   }
 
   /* ============================================================
-     结尾感谢页面
+     结尾页面
   ============================================================ */
   .finale{
     height: 100vh;
@@ -313,11 +313,9 @@
 </head>
 <body>
 
-  <!-- 顶部小水印导航已移除，如需恢复可参考历史版本 -->
 
   <!-- ============================================================
        首页 Hero 区域
-       ✏️ 修改标题 / 副标题 / 按钮文字 在下方 hero-title / hero-subtitle
   ============================================================ -->
   <section class="hero">
     <div class="hero-inner">
@@ -328,23 +326,12 @@
     <div class="scroll-hint">向下滚动</div>
   </section>
 
-  <!-- ============================================================
-       章节一
-       ✏️ 复制这一整个 <section class="chapter fade-section"> 块
-          即可添加更多章节，记得修改 id（如 chapter2, chapter3...）
-  ============================================================ -->
   <section class="chapter fade-section" id="chapter1">
-    <!-- ✏️【可修改】章节标题 -->
-    <!-- ✏️【可修改】章节标题（如需恢复，取消下方注释）
-    <h2 class="chapter-title">序</h2>
-    -->
 
-    <!-- ✏️【可修改】章节开头的一句话，换行会保留 -->
     <p class="chapter-lead">
 这封信，我想念给你听。
     </p>
 
-    <!-- ✏️【替换视频】把 video1.mp4 换成你自己的视频文件名（这里是读手写信的视频） -->
     <div class="video-wrapper">
       <video controls playsinline preload="metadata" poster="">
         <source src="video1.mp4" type="video/mp4">
@@ -352,7 +339,6 @@
       </video>
     </div>
 
-    <!-- ✏️【替换图片】把 photo1.jpg / photo2.jpg 换成手写信的照片 -->
     <div class="photo-grid">
       <div class="photo-item">
         <img src="photo1.jpg" alt="手写信">
@@ -363,20 +349,13 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       章节二（示例，可继续复制增加）
-  ============================================================ -->
   <section class="chapter fade-section" id="chapter2">
-    <!-- ✏️【可修改】章节标题（如需恢复，取消下方注释）
-    <h2 class="chapter-title">幕后</h2>
-    -->
 
-    <!-- ✏️【可修改】章节开头的一句话，换行会保留 -->
+
     <p class="chapter-lead">
 这段视频，是关于瞒着你的那些事。
     </p>
 
-    <!-- ✏️【替换视频】把 video2.mp4 换成你自己的视频文件名（这里是幕后花絮+旁白） -->
     <div class="video-wrapper">
       <video controls playsinline preload="metadata">
         <source src="video2.mp4" type="video/mp4">
@@ -384,28 +363,17 @@
       </video>
     </div>
 
-    <!-- 如果这一章节不需要图片，可以删除下面整个 photo-grid 区块 -->
     <div class="photo-grid">
       <div class="photo-item">
-        <img src="photo1.jpg" alt="照片三">
-      </div>
-      <div class="photo-item">
-        <img src="photo2.jpg" alt="照片四">
+        <img src="photo3.jpg" alt="照片三">
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       ✏️ 想要更多章节，从这里开始复制粘贴上面的 <section> 结构
-       记得：
-       1. id 改成 chapter3、chapter4...
-       2. 标题、正文、视频文件名、图片文件名都替换成新的
-  ============================================================ -->
 
 
   <!-- ============================================================
-       结尾感谢页面
-       ✏️ 修改祝福语文字 / 替换 voice.mp3 为你的录音文件
+       结尾页面
   ============================================================ -->
   <section class="finale fade-section" id="finale">
     <!-- ✏️【可修改】最终的生日祝福文字，换行会保留 -->
