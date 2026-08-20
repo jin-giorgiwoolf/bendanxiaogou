@@ -308,7 +308,89 @@
     background: linear-gradient(180deg, rgba(0,0,0,0.6), transparent);
     pointer-events: none;
   }
-
+  /* ============================================================
+     日期解锁区块（网站最下方）
+  ============================================================ */
+  .locked-ending{
+    min-height: 55vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding: 120px 24px;
+  }
+ 
+  .ending-line{
+    font-size: 15px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+ 
+  .ending-after p{
+    font-size: 15px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+ 
+  .ending-after p:nth-child(2){
+    transition-delay: 0.7s;
+  }
+ 
+  .locked-ending.is-visible .ending-after p{
+    opacity: 1;
+    transform: translateY(0);
+  }
+ 
+  .unlock-link{
+    display:inline-block;
+    margin-top: 28px;
+    padding: 14px 36px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 999px;
+    color: var(--text);
+    text-decoration:none;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease, transform 1s ease, background 0.4s ease, color 0.4s ease;
+    transition-delay: 1.3s;
+  }
+ 
+  .locked-ending.is-visible .unlock-link{
+    opacity: 1;
+    transform: translateY(0);
+  }
+ 
+  .unlock-link:hover{
+    background: var(--text);
+    color: var(--bg);
+  }
+ 
+ 
+  .top-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 32px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index: 100;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+    background: linear-gradient(180deg, rgba(0,0,0,0.6), transparent);
+    pointer-events: none;
+  }
+ 
+</style>
 </style>
 </head>
 <body>
