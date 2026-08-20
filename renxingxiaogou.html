@@ -433,5 +433,77 @@
     });
   </script>
 
+  <section class="locked-ending fade-section" id="locked-ending">
+ 
+    <!-- 解锁日期之前显示这一块 -->
+    <div class="ending-before" id="ending-before" style="display:none;">
+      <p class="ending-line">网站到这里就结束了。</p>
+    </div>
+ 
+    <!-- 解锁日期到了以后显示这一块 -->
+    <div class="ending-after" id="ending-after" style="display:none;">
+      <p>等等……</p>
+      <p>好像还有一样东西。</p>
+      <!-- ✏️ 这个链接跳转到 museum.html，记得把 museum.html 也一起上传到 GitHub -->
+      <a href="museum.html" class="unlock-link">打开最后的礼物 →</a>
+    </div>
+  </section>
+ 
+ 
+  <script>
+    // ============================================================
+    // 滚动淡入效果
+    // 所有带有 class="fade-section" 的区块，
+    // 滚动进入视口时会自动淡入显示
+    // ============================================================
+    const fadeEls = document.querySelectorAll('.fade-section');
+ 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          // 淡入一次后不再重复触发，取消观察，提升性能
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+ 
+    fadeEls.forEach(el => observer.observe(el));
+ 
+    // ============================================================
+    // 日期解锁逻辑
+    // ✏️【可修改】把下面这一行换成你想要的解锁时间
+    // 格式固定为 'YYYY-MM-DDTHH:MM:SS'，不要改动格式，只改数字
+    // ============================================================
+    const UNLOCK_DATE = new Date('2026-08-20T00:00:00');
+ 
+    if (new Date() >= UNLOCK_DATE) {
+      // 日期已到，显示"打开最后的礼物"
+      document.getElementById('ending-after').style.display = 'block';
+    } else {
+      // 日期未到，只显示"网站到这里就结束了"
+      document.getElementById('ending-before').style.display = 'block';
+    }
+ 
+ 
+    // ============================================================
+    // 平滑滚动（部分旧浏览器兼容处理）
+    // "开始观看" 按钮已经通过 CSS scroll-behavior: smooth 实现
+    // 这里做一个兜底，防止某些浏览器不支持
+    // ============================================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+ 
 </body>
 </html>
